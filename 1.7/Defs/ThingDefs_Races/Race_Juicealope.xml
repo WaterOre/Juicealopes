@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BoomalopeThingBase">
+    <defName>Juicealope</defName>
+    <label>juicealope</label>
+    <devNote>cow-1</devNote>
+    <description>Developed to support extended wartime deployment in remote areas, juicealopes are a highly aggressive derivative of the more common boomalope. The small sacs on their back are capable of synthesizing go-juice from common feedstock, which can be delicately extracted by a patient handler. The chemical is almost always found in the juicealope's bloodstream - long-term exposure is thought to have contributed to its increased intelligence.\n\nAs a consequence of their original purpose, juicealopes have been able to greatly outlive the army that created them in the care of paramilitary organizations and small-scale mercenary groups. Many believe "juicealope" originated as a nickname by soldiers, and their designated name has been lost to time.</description>
+    <statBases>
+	  <MarketValue>600</MarketValue>
+      <FilthRate>12</FilthRate>
+	  <Wildness>0.4</Wildness>
+    </statBases>
+	<comps Inherit="False">
+      <li Class="CompProperties_Milkable">
+        <milkDef>GoJuice</milkDef>
+        <milkIntervalDays>5</milkIntervalDays>
+        <milkAmount>3</milkAmount>
+        <milkFemaleOnly>false</milkFemaleOnly>
+      </li>
+    </comps>
+    <race>
+      <baseBodySize>1.4</baseBodySize>
+	  <headPosPerRotation>
+        <li>(0.0, 0, 0.20)</li>
+        <li>(0.37, 0, 0.02)</li>
+        <li>(0.0, 0, -0.165)</li>
+        <li>(-0.37, 0, 0.01)</li>
+      </headPosPerRotation>
+	  <herdAnimal>true</herdAnimal>
+	  <roamMtbDays>5</roamMtbDays>
+	  <trainability>Intermediate</trainability>
+      <manhunterOnDamageChance>1</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.4</manhunterOnTameFailChance>
+      <lifeExpectancy>12</lifeExpectancy>
+    </race>
+    <tradeTags Inherit="False">
+	  <li>AnimalUncommon</li>
+      <li>AnimalFighter</li>
+    </tradeTags>
+  </ThingDef>
+  
+  <PawnKindDef ParentName="BoomalopeKindBase">
+    <defName>Juicealope</defName>
+    <label>juicealope</label>
+    <race>Juicealope</race>
+    <combatPower>90</combatPower>
+	<ecoSystemWeight>0.5</ecoSystemWeight>
+    <wildGroupSize>1~3</wildGroupSize>
+	<startingHediffs>
+		<li>
+			<def>BloodstreamGoJuice</def>
+		</li>
+	</startingHediffs>
+    <lifeStages Inherit="False">
+      <li>
+        <label>juicealope cadet</label>
+        <labelPlural>juicealope cadets</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/juicealope/Juicealope</texPath>
+		  <color>(199,174,134)</color>
+          <drawSize>1.0</drawSize>
+          <shaderType>CutoutComplex</shaderType>
+          <shadowData>
+            <volume>(0.4, 0.3, 0.3)</volume>
+            <offset>(0,0,-0.2)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Boomalope/Dessicated_Boomalope</texPath>
+          <drawSize>1.0</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/juicealope/Juicealope</texPath>
+          <drawSize>1.6</drawSize>
+		  <color>(199,174,134)</color>
+          <shaderType>CutoutComplex</shaderType>
+          <shadowData>
+            <volume>(0.6, 0.45, 0.45)</volume>
+            <offset>(0,0,-0.25)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Boomalope/Dessicated_Boomalope</texPath>
+          <drawSize>1.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/juicealope/Juicealope</texPath>
+          <drawSize>2.2</drawSize>
+		  <color>(199,174,134)</color>
+          <shaderType>CutoutComplex</shaderType>
+          <shadowData>
+            <volume>(0.8, 0.6, 0.6)</volume>
+            <offset>(0,0,-0.3)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Boomalope/Dessicated_Boomalope</texPath>
+          <drawSize>2.0</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+</Defs>

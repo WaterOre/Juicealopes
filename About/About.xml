@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+    <name>Juicealopes</name>
+    <author>WaterOre</author>
+    <packageId>waterore.creature.juicealopes</packageId>
+    <supportedVersions>
+        <li>1.6</li>
+		<li>1.7</li>
+    </supportedVersions>
+    <description>Adds a highly aggressive, trainable variant of the boomalope that can be milked to obtain small amounts of go-juice.</description>
+</ModMetaData>
